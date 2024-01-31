@@ -1,0 +1,54 @@
+</head>
+<body>
+
+
+<section>
+  <div class="container table-responsive  table-bordered">
+<table class="table mt-5" id="viewTable">
+  <h2>HTML Table</h2>
+
+
+  <thead>
+	<th>date/tokennumber</th>
+	{{#each attendance.[0].status}}
+
+	{{!-- {{#each this.status}} --}}
+	
+    <th style="background-color:rgb(102, 102, 102) ;color:white;">{{this.date}}</th>
+	{{/each}}
+	{{!-- {{/each}} --}}
+
+	
+	
+  </thead>
+  <tbody>
+
+	
+	{{#each attendance}}
+  <tr>
+    <td>{{this.tokennumber}}</td>
+	{{#each this.status}}
+  {{#if this.status}}
+	<td style="background-color: rgba(10, 148, 10, 0.822); color:rgb(255, 255, 255); text-align:center">P</td>
+  {{else}}
+  <td style="background-color: rgba(185, 8, 8, 0.87); color:white;text-align:center;">A</td>
+  {{/if}}
+	{{/each}}
+  </tr>
+  {{/each}}
+  </tbody>
+  
+</table>
+
+
+  </div>
+</section>
+
+
+<script src="//cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+<script>
+  $(document).ready( function () {
+    $('#viewTable').DataTable();
+} );
+</script>

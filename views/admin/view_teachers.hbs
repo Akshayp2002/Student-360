@@ -1,0 +1,30 @@
+<h1 style="text-align: center;">List of Staff</h1>
+
+<table class="view_table">
+  <tr>
+    <th style="width:30%">Name</th>
+    <th>NTTF mail</th>
+    <th>Email</th>
+    <th>Role</th>
+    <th style="width: 15%;">More Details</th>
+  </tr>
+  {{#each staff}}
+  <tr>
+    <td>{{this.first_name}}</td>
+    <td>{{this.nttf_email}}</td>
+    <td>{{this.email}}</td>
+    {{#if this.admin}}
+      <td>admin</td>
+    {{else if this.staff}}
+      <td>staff</td>
+    {{else}}
+      <td>Not set</td>
+    {{/if}}
+    
+   
+    <td><a href="/dashboard/viewstaff/viewstaffprofile/{{this.staffid}}">More</a></td>
+  </tr>
+  {{/each}}
+   
+  
+</table>

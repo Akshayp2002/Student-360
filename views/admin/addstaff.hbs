@@ -1,0 +1,61 @@
+<div class="main">
+  <div class="head-bar">
+    <h2 class="card_headding">Add Staff</h2>
+  </div>
+
+  <form class="row g-3" action="/addstaff" method="post">
+
+    <h5 class="card_subheadding">Personal Details :</h5>
+
+    <div class="col-md-6">
+      <label for="fname" class="form-label">First Name :</label>
+      <input type="text" class="form-control" name="first_name" required="required"/>
+    </div>
+    <div class="col-md-6">
+      <label for="lname" class="form-label">Last Name:</label>
+      <input type="text" class="form-control" name="last_name" required="required">
+    </div>
+
+    <div class="col-md-6">
+      <label for="email" class="form-label">Personal Email:</label>
+      <input type="text" class="form-control" name="email" required="required" placeholder="@gmail.com"/>
+    </div>
+    <div class="col-md-6">
+      <label for="email" class="form-label">NTTF mail:</label>
+      <input type="text" class="form-control" name="nttf_email" required="required" placeholder="@nttf.co.in"/>
+    </div>
+
+    <div class="col-md-6">
+      <label for="dob" class="form-label">Center:</label>
+      <input type="text" class="form-control" name="center" required="required"/>
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label" for="course">Course :</label>
+      <select class="form-select" name="course">
+        <option selected>Choose...</option>
+        <option value="none">none</option>
+        <option value="computer_engineering">Diploma in Computer Engineering &
+          IT Infrastructure</option>
+        <option value="IT">Diploma in IT & Data Science</option>
+        <option value="other">other</option>
+      </select>
+    </div>
+
+    <div class="col-md-6">
+      <label for="phone" class="form-label">Phone Number:</label>
+      <input type="text" class="form-control" name="phone_number" required="required"/>
+    </div>
+    <div class="col-md-6">
+      <label for="altphone" class="form-label">Alternative Number:</label>
+      <input type="text" class="form-control" name="alternative_number" required="required"/>
+    </div>
+
+    <div class="buttons-grp">
+      <button type="reset" class="submit_button">Reset</button>
+      <button class="submit_button" value="Submit">Submit</button>
+    </div>
+
+  </form>
+
+</div>

@@ -1,0 +1,35 @@
+<section>
+  <div class="container">
+    <table class="table mt-5" id="viewTable">
+
+      <thead>
+        <th>#</th>
+        <th>Name</th>
+        <th>Token number</th>
+        <th>Contact number</th>
+        <th>more</th>
+      </thead>
+
+      <tbody>
+        {{#each trainees}}
+        <tr>
+          <td>{{@index}}</td>
+          <td>{{this.firstname}} {{this.lastname}}</td>
+		  <td>{{this.tokennumber}}</td>
+		  <td>{{this.phonenumber}}</td>
+          <td> <a href="/dashboard/mentoring/student/{{this.tokennumber}}">more</a></td>
+        </tr>
+		{{/each}}
+      </tbody>
+
+    </table>
+  </div>
+</section>
+
+<script src="//cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+<script>
+  $(document).ready( function () {
+    $('#viewTable').DataTable();
+} );
+</script>

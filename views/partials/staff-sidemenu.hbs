@@ -1,0 +1,120 @@
+<div class="wrapper">
+         <div class="sidebar">
+
+           <h2 style="text-align:center; font-size:22px;font-weight: 600;margin-bottom:15px;margin-top:-20px;">Staff</h2>
+           
+
+           <a href= "/dashboard"  class="dropdown-btn" style="text"> 
+                    <i class="fas fa-home"></i>
+                    Dashboard
+            </a>
+         
+
+
+                  <button class="dropdown-btn"> 
+                    <i  class="fas fa-user-graduate"></i>
+                    Trainee info    
+                    <i  id="i1"class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+               <a href="/dashboard/viewtrainees">Personal Details</a>
+               <a href="#">Hostlers</a>
+               <a href="#">Dayscholers</a>
+               <a href="#">Project Report</a>
+               <a href="#">Placement Details</a>
+               <a href="#">NOCN Assignment</a>
+             </div>
+
+
+
+
+             <button class="dropdown-btn"> 
+                    <i class="fa fa-money-bill"></i>
+                    Attendance    
+                    <i id="i1" class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+               <a  href="/attendance">Attendance List</a>
+               <a href="/attendance-entry">Attendance Entry</a>
+               <a href="#">Pending</a>
+               <a href="/sweetalert">Advance</a>
+               <a href="#">NOCN Fee</a>
+             </div>
+ 
+
+                 
+                 <button class="dropdown-btn"> 
+                    <i class="fas fa-marker"></i>
+                    Exams
+                    <i id="i1" class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+               <a href="#">Exam Attendance</a>
+               <a href="#">Semester Marks</a>
+               <a href="#">Other</a>
+             </div>
+
+
+
+             {{!-- <button class="dropdown-btn"> 
+                    <i class="fas fa-keyboard"></i>
+                    Add Profiles
+                    <i id="i1"class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+               <a href="/addtrainee">Trainee Entry</a>
+               <a href="/addstaff">Staff Entry</a>
+               <a href="/addbulktrainees">Trainee Bulk Upload</a>
+               <a href="/nocn">NOCN Trainee Entry</a>
+               <a href="/addbulkno">NOCN Bulk Upload</a>
+             </div> --}}
+
+
+             {{!-- <button class="dropdown-btn"> 
+                    <i class="fa fa-id-card"></i>
+                     Login Profile
+                      <i id="i1" class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+               <a href="/create_staff">Create Staff Login</a>
+               <a href="/create_admin">Create an Admin</a>
+             </div> --}}
+
+              {{!-- <button class="dropdown-btn"> 
+                    <i class="fa fa-flag" aria-hidden="true"></i>
+                    Incident 
+                    <i id="i1"class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+               <a href="#">Raise Ticket</a>
+               <a href="#">View Incident</a>
+               <a href="#">View Status</a>
+             </div> --}}
+
+             <a href= "/reports"  class="dropdown-btn" style="text"> 
+                    <i class="fas fa-mail-bulk"></i>
+                    Reports
+            </a>
+
+
+         </div>
+         <script>
+            /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+            
+            for (i = 0; i < dropdown.length; i++) {
+              dropdown[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var dropdownContent = this.nextElementSibling;
+              if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+              } else {
+              dropdownContent.style.display = "block";
+              }
+              });
+            }
+            </script>
+         
+     </div>
+</div>

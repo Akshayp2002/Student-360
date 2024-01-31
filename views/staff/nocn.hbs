@@ -1,0 +1,93 @@
+<nav class="navbar navbar-light" style="border-radius:10px;margin:10px;margin-bottom:20px;  box-shadow: 0px 10px 40px rgba(34, 35, 58, 0.212);">
+  <a class="navbar-brand" href="#">
+    <img src="https://d2xduyqs25ssfe.cloudfront.net/uploads/nocnindia.mykademy.com/items_org/logo/20110.webp?v=357?v=1.931production_v8" width="50" height="50" class="d-inline-block align-top" alt="">
+    NOCN
+  </a>
+  <button onclick="parent.location='https://nocnindia.mykademy.com/'" class="btn btn-outline-info my-2 my-sm-0" type="submit">Go to site</button>
+</nav>
+
+
+{{!-- excel submit card --}}
+{{!-- <div class="nocn_submit_card">
+  <h4 class="card_headding">Upload Excel File</h4>
+
+<form action="/addbulktrainees" method="POST" enctype="multipart/form-data">
+
+                        <div class="form-group">
+                           <label for="excel">BrowseFile</label>
+                           <input type="file" class="form-control1" name="excel" required>
+                           
+                             <button onclick="excelsubmit()" class="nocn_submit_button" value="Submit">Submit</button>
+                         </div>
+                          </form>
+</div> --}}
+
+{{!-- nocn cards --}}
+<div class="card-deck">
+  <div class="card">
+    <img
+      class="card-img-top"
+      src="https://d2xduyqs25ssfe.cloudfront.net/uploads/nocnindia.mykademy.com/items_org/course/17.webp?v=10"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+      <h5 class="card-title">Building Relationships</h5>
+      <p class="card-text"> Course validity Lifetime Validity</p>
+    </div>
+      <button class="btn btn-primary btn-md btn-block">Open</button>
+  </div>
+
+
+  <div class="card">
+    <img class="card-img-top" src="https://d2xduyqs25ssfe.cloudfront.net/uploads/nocnindia.mykademy.com/items_org/course/16.webp?v=82" alt="Card image cap" />
+    <div class="card-body">
+      <h5 class="card-title">Supply Chain Management</h5>
+            <p class="card-text"> Course validity Lifetime Validity</p>
+    </div>
+      <button class="btn btn-primary btn-md btn-block">Open</button>
+  </div>
+
+
+  <div class="card">
+    <img
+      class="card-img-top"
+      src="https://d2xduyqs25ssfe.cloudfront.net/uploads/nocnindia.mykademy.com/items_org/course/9.webp?v=22"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+      <h5 class="card-title">Operations Management</h5>
+      <p class="card-text"> Course validity Lifetime Validity</p>
+    </div>
+    <button class="btn btn-primary btn-md btn-block">Open</button>
+  </div>
+
+
+  <div class="card">
+    <img
+      class="card-img-top"
+      src="https://d2xduyqs25ssfe.cloudfront.net/uploads/nocnindia.mykademy.com/items_org/course/10.webp?v=54"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+      <h5 class="card-title">(Maintaining Systems For Health, Safety, Welfare &
+        Environmental Protection</h5>
+      <p class="card-text"> Course validity Lifetime Validity</p>
+    </div>
+    <button class="btn btn-primary btn-md btn-block">Open</button>
+
+  </div>
+</div>
+
+
+
+{{!-- sweet-icon  --}}
+<script>
+function excelsubmit()
+{
+  swal({
+  title: "Uploaded Excel",
+  icon: "success",
+  showConfirmButton: false,
+})
+}
+</script>

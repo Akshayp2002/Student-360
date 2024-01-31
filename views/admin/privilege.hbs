@@ -1,0 +1,110 @@
+<div class="top_bar">
+
+    <button onclick="parent.location='/dashboard/viewtrainees'" type="button" style="float:left" class="btn btn-info">go
+        back</button>
+
+
+    <button type="button" style="float: right;" class="btn btn-danger">Remove</button>
+
+    {{!-- <button onclick="parent.location='/dashboard/viewtrainees/profile/edit_traineeinfo/{{trainee._id}}'"
+        type="button" style="float: right;" class="btn btn-success">&emsp;Edit&emsp;</button> --}}
+
+</div>
+
+
+
+<div class="profile_page">
+
+    <div class="col-md-12">
+
+        <h3>Staff Profile</h3>
+         
+
+        <form action="/dashboard/viewstaff/viewstaffprofile" method="post">
+
+            <div class="col-lg-6" style="float:left;">
+
+
+                <label class="profile_label" for="staffid"> Staff Id :</label>
+                <input type="text" name="staffid" value="{{staff.staffid}}">
+
+                <br>
+   
+                <label class="profile_label"> Name : </label></td>
+                <label for="">{{staff.first_name}} {{staff.last_name}}</label>
+                <br>
+                <label class="profile_label"> Phone : </label></td>
+                <label for="">{{staff.phone_number}}</label>
+                <br>
+                <label class="profile_label"> Mail : </label></td>
+                <label for="">{{staff.email}}</label>
+                <br>
+                <label class="profile_label"> NTTF mail : </label></td>
+                <label for="">{{staff.nttf_email}}</label>
+                <br>
+                <label class="profile_label"> Center : </label></td>
+                <label >{{staff.center}}</label>
+                <br>
+                <label class="profile_label"> Course : </label></td>
+                <label for="">{{staff.course}}</label>
+            </div>
+           
+
+            <div class="col-lg-6" style="float:right;margin-bottom: 53px;">
+
+
+
+                <label class="form-label" for="role" style="margin-right:5px;float:left;">Role : </label>
+                <select class="form-select" name="role" style="height:30px;float:left;">
+                    <option value="admin">Admin</option>
+                    <option value="staff">Staff</option>
+                    <option>none</option>
+                </select>
+                <br>
+
+                <label class="form-label" for="role" style="margin-right:5px;">course : </label>
+                <select class="form-select" name="course" style="height:30px;">
+                    <option value="cp01">CP08</option>
+                    <option value="cp08">CP15</option>
+                    <option value="cp09">CP09</option>
+                </select>
+                {{!-- {{#if (eq staff.course "cp08")}}
+                <h1>HI</h1>
+                {{else}}
+                <h1>NO</h1>
+                {{/if}} --}}
+
+                <label class="form-label" for="role" style="margin-right:5px;">Year : </label>
+                <select class="form-select" name="year" style="height:30px;">
+                    <option value="1">1st year</option>
+                    <option value="2">2nt year</option>
+                    <option value="3">3rd year</option>
+                </select>
+
+
+                <label class="form-label" for="batch" style="margin-right:5px;float:left;">Batch : </label>
+                <select class="form-select" name="batch" style="height:30px;float:left;">
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                </select>
+                <br>
+
+                <label class="form-label" for="center" style="margin-right:5px;">Center : </label>
+                <select class="form-select" name="center" style="height:30px">
+                    <option>NEC</option>
+                    <option>TTC</option>
+                    <option>RNTC</option>
+                </select>
+                <br>
+
+
+
+
+            </div>
+
+            <button type="submit" class="excel_submit_button"> submit</button>
+
+        </form>
+    </div>
+</div>

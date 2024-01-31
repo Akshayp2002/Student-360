@@ -1,0 +1,70 @@
+{{!-- 
+<div class="fixTableHead">
+<table class="view_table" id="viewTable">
+  <thead class="thead-dark" style="position: sticky;top: 0;">
+  <tr>
+    <th style="width: 5%;"> #</th>
+    <th style="width:30%">Name</th>
+    <th>Token number</th>
+    <th>Contact Number</th>
+  </tr>
+  </thead>
+  {{#each trainees}}
+  <tr class="tablerow" onclick="parent.location='/dashboard/viewtrainees/profile/{{this._id}}'">
+    <td>{{@index}}</td>
+    <td>{{this.firstname}} {{this.lastname}}</td>
+    <td>{{this.tokennumber}}</td>
+    <td>{{this.phonenumber}}</td>
+
+  </tr>
+  {{/each}}
+</table>
+</div>
+
+<script src="//cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+<script>
+  $(document).ready( function () {
+    $('#viewTable').DataTable();
+} );
+</script>
+
+ --}}
+
+
+
+<section>
+  <div class="container">
+    <table class="table mt-5" id="viewTable">
+
+      <thead>
+        <th>#</th>
+        <th>Name</th>
+        <th>Token number</th>
+        <th>Contact number</th>
+        <th>View more</th>
+      </thead>
+
+      <tbody>
+        {{#each trainees}}
+        <tr>
+          <td>{{@index}}</td>
+          <td>{{this.firstname}} {{this.lastname}}</td>
+		  <td>{{this.tokennumber}}</td>
+		  <td>{{this.phonenumber}}</td>
+    <td><a href="/dashboard/viewtrainee/profile/{{this.tokennumber}}">More</a></td>
+        </tr>
+		{{/each}}
+      </tbody>
+
+    </table>
+  </div>
+</section>
+
+<script src="//cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+<script>
+  $(document).ready( function () {
+    $('#viewTable').DataTable();
+} );
+</script>

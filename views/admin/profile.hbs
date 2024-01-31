@@ -1,0 +1,118 @@
+{{!-- top menu --}}
+<div class="top_bar">
+
+        <button onclick="parent.location='/dashboard/viewtrainees'" type="button" style="float:left" class="btn btn-info">go back</button>
+
+        <button type="button" style="float: right;" class="btn btn-danger">Remove</button>
+
+        <button onclick="parent.location='/dashboard/viewtrainees/profile/edittraineeinfo/{{trainee.tokennumber}}'" type="button" style="float: right;" class="btn btn-success">&emsp;Edit&emsp;</button>
+
+</div>
+
+{{!-- profile section --}}
+
+<div class="profile_page" >
+    
+  <div class="col-lg-12">
+
+<form action="#" method="post">
+        <!--left-->
+<div class="col-lg-6"  style="float: left;">
+        <h2 class="heading">Student Details</h2>
+        <br>
+                <label class="label-name"> Name :</label></td>
+               <label class="profile-caps" for="">{{trainee.firstname}} {{trainee.lastname}}</label> 
+                 <br>
+                 <br>
+
+                <label class="label-name" for="" > Email :</label> 
+                <a href="mailto:{{trainee.email}}">{{trainee.email}}</a>
+                <br>
+                <br>
+    
+                <label class="label-name"for=""> Token Number :</label> 
+                <label class="profile-caps" for="">{{trainee.tokennumber}}</label>
+                <br>
+                <br>
+        
+                <label class="label-name"> DOB :</label>
+                <label>{{trainee.dob}}</label> 
+                <br>
+                <br>
+     
+                <label class="label-name"> Gender :</label> 
+                <label class="profile-caps">{{trainee.gender}}</label>
+                <br>
+                <br>
+                 
+                <label class="label-name"> Course :</label> 
+                <label class="profile-caps" >{{trainee.course}}</label>
+                <br>
+                <br>
+
+                <label class="label-name"> Catagory :</label>
+                <label class="profile-caps" >{{trainee.category}}</label>
+                <br>
+                <br>
+                  
+                <label class="label-name"> Phone No :</label>
+                <a href="tel:+919544233890">{{trainee.phonenumber}}</a>
+                <br>
+                <br>
+
+                <label class="label-name"> Phone No :</label>
+                <a href="tel:+918903644244">{{trainee.alternativenumber}}</a>
+</div>
+
+                                 <!--right-->
+
+<div class="col-lg-6" style="float:right;" style="word-break: break-all">
+
+            <h2 class=>Parent Details</h2>
+                <br>
+                <label class="label-name"> Father's Name</label>
+                <label class="profile-caps">{{trainee.fathername}}</label> 
+                <br>
+
+                <label class="label-name">Father's Name </label>
+                <label >{{trainee.fathermobile}}</label>
+                <br>
+                <br>
+
+                <label class="label-name"> Mother's Name</label>
+                <label class="profile-caps">{{trainee.mothername}}</label> 
+                <br>
+                <br>
+
+                <label class="label-name">Mother's Phone</label>
+                <label> {{trainee.mothermobile}}</label>
+                <br>
+                <br>
+
+                <label class="label-name">Address :</label> 
+                <labelstyle="word-break: break-all">{{trainee.address}}</label>
+                <br>
+                <br
+                <!--<label for="">Address2</label> 
+                <label for="" style="word-break: break-all;">{{trainee.address2}}</label> <br>
+                
+                <div class="line1"></div><br> 
+                <label for=""> City</label>
+                <label for="">{{trainee.city}}</label>
+               
+                <label for=""> State</label>
+                <label for="">{{trainee.state}}</label>
+        
+                <label for=""> PIN</label>
+                <label for="">{{trainee.zip_code}}</label> -->
+
+</form>
+  </div>
+      </div>
+  </div>
+  
+  
+
+
+
+

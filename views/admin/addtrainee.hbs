@@ -1,0 +1,183 @@
+<div class="main">
+  <div class="head-bar">
+    <h2 class="card_headding">Add Trainees</h2>
+  </div>
+  <form class="row g-3" action="/addtrainee" method="POST" onsubmit="return submitForm(this);"> 
+    
+
+
+
+      <h5 class="card_subheadding">Personal Details :</h5>
+
+      <div class="col-md-6">
+        <label for="fname" class="form-label">First Name :</label>
+        <input type="text" class="form-control" name="firstname" required>
+      </div>
+      <div class="col-md-6">
+        <label for="lname" class="form-label">Last Name :</label>
+        <input type="text" class="form-control" name="lastname" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="email" class="form-label">Personal Email:</label>
+        <input type="email" class="form-control" name="email" requiredplaceholder="@gmail.com" required>
+      </div>
+      <div class="col-md-6">
+        <label for="dob" class="form-label">Date of Birth:</label>
+        <input type="date" class="form-control" name="dob" required>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label" for="gender">Gender :</label>
+        <select class="form-select" name="gender" required>
+          <option value="">Choose...</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label" for="gender">year :</label>
+        <select class="form-select" name="gender" required>
+          <option value="">Choose...</option>
+          <option value="male">1</option>
+          <option value="female">2</option>
+          <option value="other">3</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label" for="course">Course :</label>
+        <select class="form-select" name="course" required>
+          <option value="">Choose...</option>
+          
+          <option value="cp08">Diploma in Computer Engineering &
+            IT Infrastructure</option>
+          <option value="cp09">Diploma in IT & Data Science</option>
+          <option value="cp15">Diploma in Mechatronics</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label" for="category">Category :</label>
+        <select class="form-select" name="category" required>
+          <option >Choose...</option>
+          <option value="dayschollar">DAYSCHOLLER</option>
+          <option value="hosteller">HOSTLLER</option>
+
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label" for="quota">Quota :</label>
+        <select class="form-select" name="quota" required>
+          <option value="">None</option>
+          <option value="merit">MERIT</option>
+          <option value="fullfee">FULL FEE</option>
+
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label for="tokennumber" class="form-label">Token Number :</label>
+        <input type="text" class="form-control" name="tokennumber" required>
+      </div>
+      <div class="col-md-6">
+        <label for="aadhar" class="form-label">Aadhar Number :</label>
+        <input type="text" class="form-control" name="aadharnumber" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="phone" class="form-label">Phone Number:</label>
+        <input type="text" class="form-control" name="phonenumber" required>
+      </div>
+      <div class="col-md-6">
+        <label for="altphone" class="form-label">Alternative Number:</label>
+        <input type="text" class="form-control" name="alternativephonenumber" required>
+      </div>
+
+      <h5 class="card_subheadding">Guardian Details :</h5>
+
+      <div class="col-md-6">
+        <label for="phone" class="form-label">Father's Name:</label>
+        <input type="text" class="form-control" name="fathersname" required>
+      </div>
+      <div class="col-md-6">
+        <label for="altphone" class="form-label">Father's Mobile :</label>
+        <input type="text" class="form-control" name="fathersphonenumber" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="phone" class="form-label">Mother's name:</label>
+        <input type="text" class="form-control" name="mothersname" required>
+      </div>
+      <div class="col-md-6">
+        <label for="altphone" class="form-label">Mother's Mobile:</label>
+        <input type="text" class="form-control" name="mothersphonenumber" required>
+      </div>
+
+      <h5 class="card_subheadding">Address Details :</h5>
+
+      <div class="col-12">
+        <label for="Address" class="form-label">Address</label>
+        <input
+          type="text"
+          class="form-control"
+          name="permanentaddress"
+          placeholder="1234 Main St"
+          required        />
+      </div>
+      <div class="col-12">
+        <label for="Address2" class="form-label">Address 2</label>
+        <input
+          type="text"
+          class="form-control"
+          name="currentaddress"
+          placeholder="Apartment, studio, or floor"
+          required        />
+      </div>
+      <!--<div class="col-md-6">
+        <label for="city" class="form-label">City</label>
+        <input type="text" class="form-control" name="city" required>
+      </div>
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">State</label>
+        <input type="text" class="form-control" name="state" required>
+      </div>
+      <div class="col-md-2">
+        <label for="inputZip" class="form-label">Zip</label>
+        <input type="text" class="form-control" name="zip_code" required>
+      </div> -->
+    <div class="buttons-grp">
+      <button type="reset" class="btn btn-danger">  Reset  </button>
+      <button  class="btn btn-success" type="submit" value="Submit">Submit</button>
+    </div>
+    </div>
+    
+
+  </form>
+</div>
+
+
+<script>
+ function submitForm()
+{
+ 
+    Swal.fire({
+  title: 'Admin created',
+  icon: 'success',
+  confirmButtonColor: '#28a745',
+  confirmButtonText: 'OK',
+}).then((result) => {
+  if (result.isConfirmed) {
+      window.location='/addtrainee'
+  }
+})
+
+}
+
+</script>
+
+
+

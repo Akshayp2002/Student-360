@@ -1,0 +1,93 @@
+        
+<div class="main">
+  <div class="head-bar">
+    <h2 class="card_headding">Add Admin</h2>
+  </div>
+   
+
+
+        <form class="row g-3" action="/create-admin" method="post" onsubmit="return adminsubmitForm(this);" >
+
+
+         <h5 class="card_subheadding">Admin Details :</h5>
+
+      <div class="col-md-6">
+        <label for="fname" class="form-label">First Name :</label>
+        <input type="text" class="form-control" name="first_name"required="required" />
+      </div>
+      <div class="col-md-6">
+        <label for="lname" class="form-label">Last Name:</label>
+              <input type="text" class="form-control" name="last_name" required="required"/>
+      </div>
+
+      <div class="col-md-6">
+        <label for="email" class="form-label">Personal Email:</label>
+        <input type="email" class="form-control" name="email"required="required">
+      </div>
+      <div class="col-md-6">
+        <label for="email" class="form-label">NTTF mail:</label>
+        <input type="email" class="form-control" name="nttf_email" required="required">
+      </div>
+
+      <div class="col-md-12">
+        <label for="phone" class="form-label">Phone Number:</label>
+        <input type="text" class="form-control" name="phone_number" required="required" />
+      </div>
+
+      <div>
+
+      </div>
+
+      <div class="col-md-6">
+        <label  class="form-label">Password</label>
+        <input class="form-control" name="password" type="password" placeholder="Password" id="password" required>
+      </div>
+      
+      <div class="col-md-6">
+        <label class="form-label">Confirm Password</label>
+        <input class="form-control" type="password"  placeholder="Confirm Password" id="confirm_password" required>
+      </div>
+        
+      
+       
+
+
+        <div class="buttons-grp">
+        <button type="reset" class="submit_button">Reset</button>
+        <button class="submit_button" value="Submit">Submit</button>
+         </div>
+          
+          </form>
+          </div>
+
+          <script>
+            var password = document.getElementById("password")
+            confirm_password = document.getElementById("confirm_password");
+            function validatePassword(){
+            if(password.value != confirm_password.value) {
+              confirm_password.setCustomValidity("Passwords Don't Match");
+            } else {
+            confirm_password.setCustomValidity('');
+            }
+            }
+
+            password.onchange = validatePassword;
+            confirm_password.onkeyup = validatePassword;
+         
+function adminsubmitForm()
+{
+ 
+    Swal.fire({
+  title: 'Admin created',
+  icon: 'success',
+  confirmButtonColor: '#28a745',
+  confirmButtonText: 'OK',
+}).then((result) => {
+  if (result.isConfirmed) {
+      window.location='/addtrainee'
+  }
+})
+
+}
+</script>
+       

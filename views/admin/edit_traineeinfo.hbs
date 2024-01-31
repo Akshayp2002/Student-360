@@ -1,0 +1,152 @@
+<div class="main">
+  <div class="head-bar">
+    <h2 class="card_headding">Edit Trainees</h2>
+  </div>
+
+  <form action="/dashboard/viewtrainees/profile/edit_traineeinfo/{{trainee.tokennumber}}" class="row g-3" method="POST">
+    
+
+      <h5 class="card_subheadding">Personal Details :</h5>
+
+      <div class="col-md-6">
+        <label for="fname" class="form-label">First Name :</label>
+        <input type="text" value="{{trainee.firstname}}" class="form-control" name="firstname" required>
+      </div>
+      <div class="col-md-6">
+        <label for="lname" class="form-label">Last Name :</label>
+        <input type="text" value="{{trainee.lastname}}" class="form-control" name="lastname" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="email" class="form-label">Personal Email:</label>
+        <input type="email" value="{{trainee.email}}" class="form-control" name="email" requiredplaceholder="@gmail.com">
+      </div>
+      <div class="col-md-6">
+        <label for="dob" class="form-label">Date of Birth:</label>
+        <input type="date" value="{{trainee.dob}}" class="form-control" name="dob" required>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label" for="gender">Gender :</label>
+        <select class="form-select" name="gender">
+          <option value="{{trainee.gender}}" selected>{{trainee.gender}}</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">other</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label" for="course">Course :</label>
+        <select class="form-select" name="course">
+          <option value="{{trainee.course}}" selected>{{trainee.course}}</option>
+          <option value="CP08">Diploma in Computer Engineering &
+            IT Infrastructure</option>
+          <option value="CP09">Diploma in IT & Data Science</option>
+          <option value="other">other</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label" for="category">Category :</label>
+        <select class="form-select" name="category">
+          <option value="{{trainee.category}}" selected>{{trainee.category}}</option>
+          <option value="dayscholle">DAYSCHOLLER</option>
+          <option value="hostller">HOSTLLER</option>
+
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label" for="quota">Quota :</label>
+        <select class="form-select" name="quota">
+          <option value="{{trainee.quota}}" selected>{{trainee.quota}}</option>
+          <option value="merit">MERIT</option>
+          <option value="fullfee">FULL FEE</option>
+
+        </select>
+      </div>
+    
+      
+
+      <div class="col-md-6">
+        <label for="tokennumber" class="form-label">Token Number :</label>
+        <input type="text" value="{{trainee.tokennumber}}" class="form-control" name="tokennumber" required>
+      </div>
+      <div class="col-md-6">
+        <label for="aadhar" class="form-label">Aadhar Number :</label>
+        <input type="text" value="{{trainee.aadharnumber}}" class="form-control" name="aadharnumber" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="phone" class="form-label">Phone Number:</label>
+        <input type="text" value="{{trainee.phonenumber}}" class="form-control" name="phonenumber" required>
+      </div>
+      <div class="col-md-6">
+        <label for="altphone" class="form-label">Alternative Number:</label>
+        <input type="text" value="{{trainee.alternativenumber}}" class="form-control" name="alternativenumber" required>
+      </div>
+
+      <h5 class="card_subheadding">Guardian Details :</h5>
+
+      <div class="col-md-6">
+        <label for="phone" class="form-label">Father's Name:</label>
+        <input type="text" value="{{trainee.fathername}}" class="form-control" name="fathername" required>
+      </div>
+      <div class="col-md-6">
+        <label for="altphone" class="form-label">Father's Mobile :</label>
+        <input type="text" value="{{trainee.fathermobile}}" class="form-control" name="fathermobile" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="phone" class="form-label">Mother's name:</label>
+        <input type="text" value="{{trainee.mothername}}" class="form-control" name="mothername" required>
+      </div>
+      <div class="col-md-6">
+        <label for="altphone" class="form-label">Mother's Mobile:</label>
+        <input type="text" value="{{trainee.mothermobile}}" class="form-control" name="mothermobile" required>
+      </div>
+
+      <h5 class="card_subheadding">Address Details :</h5>
+
+      <div class="col-12">
+        <label for="Address" class="form-label">Address</label>
+        <input
+          type="text"
+          value="{{trainee.address}}"
+          class="form-control"
+          name="permanentaddress"
+          placeholder="1234 Main St"
+          required />
+      </div>
+      {{!-- <div class="col-12">
+        <label for="Address2" class="form-label">Address 2</label>
+        <input
+          type="text"
+          value="{{trainee.address2}}"
+          class="form-control"
+          name="address2"
+          placeholder="Apartment, studio, or floor"
+          required        />
+      </div> --}}
+      <div class="col-md-6">
+        <label for="city" class="form-label">City</label>
+        <input type="text" value="{{trainee.city}}" class="form-control" name="city" required>
+      </div>
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">State</label>
+        <input type="text" value="{{trainee.state}}" class="form-control" name="state" required>
+      </div>
+      <div class="col-md-2">
+        <label for="inputZip" class="form-label">Zip</label>
+        <input type="text" value="{{trainee.zip_code}}" class="form-control" name="zip_code" required>
+      </div>
+    <div class="buttons-grp">
+      <button class="submit_button" value="Submit">Submit</button>
+    </div>
+    </div>
+    
+
+  </form>
+
+</div>
