@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var nttfHelper= require('../helper/nttfhelper')
-var attendanceHelper= require('../helper/attendancehelper')
+var attendanceHelper= require('../helper/attendanceHelper')
 let user
 
 
@@ -12,7 +12,7 @@ let user
 
 var XLSX       = require('xlsx');
 var multer     = require('multer');
-const attendancehelper = require('../helper/attendancehelper');
+const attendancehelper = require('../helper/attendanceHelper');
 //multer
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
